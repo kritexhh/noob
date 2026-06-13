@@ -53,6 +53,7 @@ body::before{
 }
 
 /* ── NAV ── */
+/* ── NAV ── */
 nav{
   position:fixed;top:14px;left:50%;transform:translateX(-50%);z-index:1000;
   display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
@@ -63,20 +64,20 @@ nav{
   transition:var(--t);
 }
 nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgba(10,50,100,0.18)}
-
+ 
 .logo-wrap{display:flex;align-items:center;gap:10px;cursor:pointer;flex-shrink:0;text-decoration:none}
-.logo-mark svg{width:38px;height:38px}
+.logo-mark{width:80px;height:80px;flex-shrink:0;display:flex;align-items:center;justify-content:center}
+.logo-mark img{width:70px;height:70px;object-fit:contain;display:block}
 .logo-text{display:flex;flex-direction:column;line-height:1}
 .logo-text b{font-family:'Fraunces',serif;font-size:.84rem;font-weight:700;letter-spacing:.09em;color:var(--blue)}
 .logo-text small{font-size:.55rem;color:var(--muted);letter-spacing:.07em;margin-top:2px}
-
+ 
 .nav-links{display:flex;align-items:center;gap:.05rem;list-style:none}
 .nav-links a{font-size:.81rem;font-weight:500;color:var(--text2);padding:.4rem .84rem;border-radius:50px;cursor:pointer;text-decoration:none;transition:all .22s;white-space:nowrap}
 .nav-links a:hover{color:var(--blue);background:rgba(21,101,192,0.08)}
 .nav-links a.active{color:var(--blue);background:rgba(21,101,192,0.1);border:1px solid rgba(21,101,192,0.18)}
 .nbtn{background:linear-gradient(135deg,var(--blue),var(--blue2));color:#fff;border:none;padding:.52rem 1.2rem;border-radius:50px;font-family:'Plus Jakarta Sans',sans-serif;font-size:.79rem;font-weight:600;cursor:pointer;transition:var(--t);box-shadow:var(--sblu);flex-shrink:0;white-space:nowrap}
 .nbtn:hover{transform:translateY(-2px) scale(1.03);box-shadow:0 12px 32px rgba(21,101,192,0.38)}
-
 /* ── PAGES ── */
 .page{display:none;position:relative;z-index:1;min-height:100vh}
 .page.active{display:block}
@@ -592,17 +593,8 @@ nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgb
 <!-- ═══ NAV ═══ -->
 <nav id="nav">
   <div class="logo-wrap" onclick="showPage('home')">
-    <div class="logo-mark">
-      <svg width="38" height="38" viewBox="0 0 40 40">
-        <defs><linearGradient id="nlg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00C8F0"/></linearGradient></defs>
-        <path d="M20 2L36 11V29L20 38L4 29V11Z" fill="url(#nlg)" opacity=".18"/>
-        <path d="M20 2L36 11V29L20 38L4 29V11Z" fill="none" stroke="url(#nlg)" stroke-width="1.5"/>
-        <path d="M20 8C16.5 8 12 15 12 20a8 8 0 0016 0c0-5-3.5-12-8-12z" fill="url(#nlg)"/>
-        <path d="M14 30 Q20 26 26 30" fill="none" stroke="#00C8F0" stroke-width="1.5" stroke-linecap="round" opacity=".8"/>
-        <path d="M16 33 Q20 30.5 24 33" fill="none" stroke="#00C8F0" stroke-width="1.5" stroke-linecap="round" opacity=".5"/>
-      </svg>
-    </div>
-    <div class="logo-text"><b>HYDROLINK</b><small>Infrasolutions & Solutions</small></div>
+    <div class="logo-mark"><img src="hydrolink-logo.png" alt="Hydrolink Logo"/></div>
+    <div class="logo-text"><b>HYDROLINK</b><small>Infrastructure &amp; Solutions</small></div>
   </div>
   <ul class="nav-links">
     <li><a onclick="showPage('home')" id="nh" class="active">Home</a></li>
@@ -876,8 +868,8 @@ nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgb
     <div class="fi">
       <div class="fbrand">
         <div class="logo-wrap" onclick="showPage('home')" style="margin-bottom:.75rem">
-          <div class="logo-mark"><svg width="36" height="36" viewBox="0 0 40 40"><defs><linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00C8F0"/></linearGradient></defs><path d="M20 2L36 11V29L20 38L4 29V11Z" fill="url(#flg)" opacity=".18"/><path d="M20 2L36 11V29L20 38L4 29V11Z" fill="none" stroke="url(#flg)" stroke-width="1.5"/><path d="M20 8C16.5 8 12 15 12 20a8 8 0 0016 0c0-5-3.5-12-8-12z" fill="url(#flg)"/><path d="M14 30 Q20 26 26 30" fill="none" stroke="#00C8F0" stroke-width="1.5" stroke-linecap="round" opacity=".8"/><path d="M16 33 Q20 30.5 24 33" fill="none" stroke="#00C8F0" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg></div>
-          <div class="logo-text"><b>HYDROLINK</b><small>Infrasolutions & Solutions</small></div>
+          <div class="logo-mark"><svg width="80px" height="80px" viewBox="0 0 40 40"><defs><linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1565C0"/><stop offset="100%" stop-color="#00C8F0"/></linearGradient></defs><path d="M20 2L36 11V29L20 38L4 29V11Z" fill="url(#flg)" opacity=".18"/><path d="M20 2L36 11V29L20 38L4 29V11Z" fill="none" stroke="url(#flg)" stroke-width="1.5"/><path d="M20 8C16.5 8 12 15 12 20a8 8 0 0016 0c0-5-3.5-12-8-12z" fill="url(#flg)"/><path d="M14 30 Q20 26 26 30" fill="none" stroke="#00C8F0" stroke-width="1.5" stroke-linecap="round" opacity=".8"/><path d="M16 33 Q20 30.5 24 33" fill="none" stroke="#00C8F0" stroke-width="1.5" stroke-linecap="round" opacity=".5"/></svg></div>
+          <div class="logo-text"><b>HYDROLINK</b><small>Infrastructure & Solutions</small></div>
         </div>
         <p>Pure Water, Clean Future. Professional water infrastructure and engineering solutions across Mumbai, Thane &amp; beyond.</p>
         <div class="fchips"><span class="fchip">Engineering</span><span class="fchip">Water Treatment</span><span class="fchip">AMC</span><span class="fchip">Infrastructure</span></div>
@@ -890,7 +882,7 @@ nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgb
         <button class="btn-p" onclick="showPage('contact')" style="margin-top:1.1rem;font-size:.8rem;padding:.65rem 1.4rem">Request a Proposal</button>
       </div>
     </div>
-    <div class="fbot"><p>© 2026 Hydrolink Infrasolutions & Solutions. All rights reserved.</p></div>
+    <div class="fbot"><p>© 2026 Hydrolink Infrastructure & Solutions. All rights reserved.</p></div>
   </div>
 </div><!-- END HOME -->
 
@@ -923,14 +915,13 @@ nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgb
     <div class="svc-section rev">
       <div class="svc-sec-header">
         <div class="svc-sec-icon">🏗️</div>
-        <div><h2>Water Infrastructure Services</h2><p>Pipeline, pump, tank, and plumbing solutions for reliable water supply and distribution.</p></div>
+        <div><h2>Infrastructure Services</h2><p>Sewage water treatment plant services, CCTV Services, Boom barrier, Networking</p></div>
       </div>
       <div class="sgrid">
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="waterwaterpipe.jpeg" alt="Pipeline" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔩</div><h3>Water Pipeline Installation</h3></div><p>Design and installation of water supply networks for residential, commercial, and industrial premises using quality pipe systems and fittings.</p></div></div>
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="pumpautomation.jpg" alt="Pump" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">⚙️</div><h3>Pump Installation &amp; Automation</h3></div><p>Supply, installation, and automation of water pumps including submersible, booster, and pressure pumps for optimal water distribution.</p></div></div>
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="overhead.png" alt="Tank" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🪣</div><h3>Overhead &amp; Underground Tanks</h3></div><p>Installation and periodic cleaning of overhead water tanks and underground sump tanks for housing societies and commercial buildings.</p></div></div>
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="plumbing.jpg" alt="Plumbing" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔧</div><h3>Plumbing Infrastructure</h3></div><p>Complete plumbing work for new construction and renovation projects — from hot/cold water lines to drainage systems and sanitary fittings.</p></div></div>
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="borewell.jpg" alt="Borewell" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🌊</div><h3>Borewell Water Distribution</h3></div><p>Borewell water supply systems with filtration, pumping, and distribution network setup for reliable water access in high-demand locations.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="sweage.png" alt="Pipeline" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔩</div><h3>Sewage water treatment plant services</h3></div><p>Design and installation of water supply networks for residential, commercial, and industrial premises using quality pipe systems and fittings.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="cctv.png" alt="Pump" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">⚙️</div><h3>CCTV Services</h3></div><p>Professional CCTV installation, configuration, and maintenance for complete security coverage of residential and commercial properties.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="Boom-barrier-.jpg" alt="Tank" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🪣</div><h3>Boom barrier</h3></div><p>Automatic boom barrier installation and maintenance for residential societies, commercial buildings, and parking facilities. Complete integration with access control.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="networking.png" alt="Plumbing" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔧</div><h3>Networking</h3></div><p>Design, installation, and maintenance of secure network systems, ensuring fast, reliable, and scalable communication across your organization.</p></div></div>
       </div>
     </div>
 
@@ -960,8 +951,10 @@ nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgb
         <div><h2>Security &amp; Networking</h2><p>Smart security systems and structured network infrastructure for buildings and campuses.</p></div>
       </div>
       <div class="sgrid">
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="networking.png" alt="Networking" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🌐</div><h3>Networking Solutions</h3></div><p>Structured cabling, LAN/WAN setup, and network optimization. Ongoing servicing for reliable, secure connectivity across commercial and residential premises.</p></div></div>
-        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="undersink.jpg" alt="Under-Sink RO" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔩</div><h3>Under-Sink Model RO</h3></div><p>Compact under-sink RO systems for modern kitchens. Space-saving design with multi-stage purification and easy maintenance access.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="cctv.png" alt="Pump" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">⚙️</div><h3>CCTV Services</h3></div><p>Professional CCTV installation, configuration, and maintenance for complete security coverage of residential and commercial properties.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="Boom-barrier-.jpg" alt="Tank" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🪣</div><h3>Boom barrier</h3></div><p>Automatic boom barrier installation and maintenance for residential societies, commercial buildings, and parking facilities. Complete integration with access control.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="networking.png" alt="Plumbing" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔧</div><h3>Networking</h3></div><p>Design, installation, and maintenance of secure network systems, ensuring fast, reliable, and scalable communication across your organization.</p></div></div>
+        <div class="svcard"><div class="sv-gallery"><div class="sv-slides"><div class="sv-slide"><img src="vdp.jpg" alt="Video door phone" onerror="this.parentElement.style.background='rgba(21,101,192,0.12)';this.remove()"/></div></div><div class="gallery-dots"><span class="gdot active"></span></div></div><div class="svbody"><div class="svhead"><div class="svico">🔔</div><h3>VDP (Video Door Phone)</h3></div><p>Install and maintain video door phone systems for real-time visitor verification at homes, apartments, and office buildings.</p></div></div>
       </div>
     </div>
     <div class="svc-section rev">
@@ -987,7 +980,7 @@ nav.scrolled{background:rgba(200,223,244,0.97);top:6px;box-shadow:0 8px 40px rgb
       <div class="fcol"><h4>Explore</h4><ul><li><a onclick="showPage('home')">Home</a></li><li><a onclick="showPage('about')">About</a></li><li><a onclick="showPage('services')">Services</a></li><li><a onclick="showPage('contact')">Contact</a></li></ul></div>
       <div class="fcol"><h4>Contact</h4><div class="fci"><span class="ico">✉</span><span>hydrolink.infrasolutions@gmail.com</span></div><div class="fci"><span class="ico">📞</span><span>8451027267 — Yash Tiwari</span></div><div class="fci"><span class="ico">📍</span><span>Malad West, near Krishna Hotel, Opp. LM Patel Hospital</span></div><button class="btn-p" onclick="showPage('contact')" style="margin-top:1.1rem;font-size:.8rem;padding:.65rem 1.4rem">Request a Proposal</button></div>
     </div>
-    <div class="fbot"><p>© 2026 Hydrolink Infrasolutions & Solutions. All rights reserved.</p></div>
+    <div class="fbot"><p>© 2026 Hydrolink Infrastructure & Solutions. All rights reserved.</p></div>
   </div>
 </div><!-- END SERVICES -->
 
